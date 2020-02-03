@@ -3,18 +3,18 @@
 
 var number1 = prompt ("1st number");
 var number2 = prompt("2nd number");
-if (number1 % number2 === 0) {
-   alert("0");
-} else {
-	alert("1");
-}
+	if (number1 % number2 === 0) {
+  		 alert("0");
+	} else {
+		alert("1");
+	}
 
 // 2 
 
 var angle1 = prompt("1st angle");
 var angle2 = prompt("2nd angle");
 var angle3 = 180 -  angle1 - angle2;
-alert (angle3);
+	alert (angle3);
 
 //3 
 
@@ -22,18 +22,18 @@ var a = prompt("type number");
 var b =  a + a;
 var c =  b + a;
 var result = Number(a) + Number(b) + Number(c);
-alert(result);
+	alert(result);
 
 // 4 
 
 var num = prompt("type number");
-if(num%10 === 0 || num < 10){
-	alert (num);
-}  else {
-	var firstNum = num % 10;
-	var lastNum = (num - num % 10) / 10;
-	var result = firstNum.toString() + lastNum.toString();
-	alert (result);
+	if(num%10 === 0 || num < 10){
+		alert (num);
+	}  else {
+		var firstNum = num % 10;
+		var lastNum = (num - num % 10) / 10;
+		var result = firstNum.toString() + lastNum.toString();
+		alert (result);
 }
 
  //5
@@ -45,7 +45,7 @@ var num4 = prompt("number4");
 var num5 = prompt("number5");
 var result1 = Number(num1) + Number(num2) + Number(num3) + Number(num4) + Number(num5);
 var result2 = result1/5;
-alert(result2)
+	alert(result2)
 
 
 
