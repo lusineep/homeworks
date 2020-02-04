@@ -3,7 +3,7 @@
 
 var number1 = prompt ("1st number");
 var number2 = prompt("2nd number");
-	if (number1 % number2 === 0) {
+	if (number1 % number2 === 0 || number2 % number1 === 0) {
   		 alert("0");
 	} else {
 		alert("1");
@@ -32,7 +32,7 @@ var num = prompt("type number");
 	}  else {
 		var firstNum = num % 10;
 		var lastNum = (num - num % 10) / 10;
-		var result = firstNum.toString() + lastNum.toString();
+		var result = String(firstNum) + String(lastNum);
 		alert (result);
 }
 
