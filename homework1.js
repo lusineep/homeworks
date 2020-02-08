@@ -3,12 +3,18 @@
 
 var number1 = prompt ("1st number");
 var number2 = prompt("2nd number");
-	if (number1 % number2 === 0 || number2 % number1 === 0) {
+	if(isNaN(Number(number1)) || isNaN(+number2) || number1 === null || number2 === null )
+	{
+	   alert("invalid inputs")
+	} 
+	else {
+		if (number1 % number2 === 0 || number2 % number1 === 0) 
+		{
   		 alert("0");
-	} else {
+		} else {
 		alert("1");
-	}
-
+		}
+		}
 // 2 
 
 var angle1 = prompt("1st angle");
@@ -27,7 +33,7 @@ var result = Number(a) + Number(b) + Number(c);
 // 4 
 
 var num = prompt("type number");
-	if(num%10 === 0 || num < 10){
+	if(num%10 === 0 || (num < 10 && num  > 0) ){
 		alert (num);
 	}  else {
 		var firstNum = num % 10;
