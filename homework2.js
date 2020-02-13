@@ -34,23 +34,22 @@ let tmp = 0;
         
     
 
- //3  arr to number ? 
+ //3  
  
 let num = prompt("enter number");
 let arr = [];
+let newNum = "";
 let lastNum = num[num.length-1];
 let firstNum = num[0];
-for(i = 0 ; i < num.length; i++){
-       arr[i] =  num[i];
+for(i = 1 ; i < num.length-1; i++){
+       newNum +=  num[i];
         };
-let middleNum1 = arr.shift();
-let middleNum2 = arr.pop();
-let result1 = arr.unshift(lastNum);
-let result2 = arr.push(firstNum);
+console.log(newNum);
+let result  = `${lastNum}${newNum}${firstNum}`
 if (num < 10 && num >= 0){
-        alert(num)
+        alert(num);
 }else{
-alert(arr);}
+alert(result);}
 
 
 //4 
