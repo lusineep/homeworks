@@ -26,7 +26,7 @@ let tmp = 0;
             tmp += 1;
             }
         }
-        if (tmp == 1){
+        if (tmp === 1){
         	alert("yes")
         }else{
         	alert("no")
@@ -41,15 +41,16 @@ let arr = [];
 let newNum = "";
 let lastNum = num[num.length-1];
 let firstNum = num[0];
-for(i = 1 ; i < num.length-1; i++){
-       newNum +=  num[i];
-        };
-console.log(newNum);
-let result  = `${lastNum}${newNum}${firstNum}`
 if (num < 10 && num >= 0){
         alert(num);
-}else{
-alert(result);}
+	}else{
+	for(i = 1 ; i < num.length-1; i++){
+       		newNum +=  num[i];
+        };
+//console.log(newNum);
+		let result  = `${lastNum}${newNum}${firstNum}`;
+		alert(result);
+	}
 
 
 //4 
@@ -117,4 +118,44 @@ if(height !== 0 && base !== 0 && figureName === "triangle"){
 
 
 //8
+
+let num = prompt();
+let toArr = [];
+let minN = [];
+let maxN = [];
+for(i=0; i < num.length; i++){
+        toArr[i] = num[i];
+}
+// console.log(toArr);
+for(i = 0; i < toArr.length ; i++){
+//         debugger;
+        if(toArr[i+1]){
+              if(toArr[i] <= toArr[i+1]){
+                toArr[i+1] = toArr[i];
+                minN = toArr[i];
+            }
+            }else{
+        minN = toArr[toArr.length-1];       
+}
+
+}
+// console.log(minN);
+for (i = 0; i < num.length; i++){
+    toArr[i] = num[i]
+    }
+for(i = 0; i < toArr.length; i++){
+//         debugger;
+        if(toArr[i+1]){
+            if(toArr[i] >= toArr[i+1]){
+                toArr[i+1] = toArr[i];
+                maxN = toArr[i];
+                
+                }
+        }else{ 
+            maxN = toArr[toArr.length-1];
+    }
+}
+// console.log(maxN);
+let result = maxN - minN;
+alert(result);
 
