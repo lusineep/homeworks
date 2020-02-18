@@ -1,5 +1,26 @@
 //1
 
+function replace(string, wordsArray)
+{
+              let a = string.split(" ");
+              let count = 0;
+              if(Array.isArray(wordsArray))
+              {
+                  for(let i = 0; i < a.length; i++)
+                  {
+                     if(a[i] === "_")
+                     {
+                     a[i] = wordsArray[count];
+                     count ++;
+                     }                  
+                  }
+                        let result = a.join(" ");
+                        return result;
+              }else
+              {
+                        return "invalid input";
+              }
+}
 
 
 //2
@@ -29,23 +50,34 @@ function getNumbers(allArray)
 }
 
 //3
-function numStringCount(string)
-{
-               let countN = 0;
-               let countS = 0;
-               for(let i = 0; i < string.length; i++)
-               {
-                    if(typeof(string[i]) === "number")
-                    {
-                        countN ++;
-                    }else if(typeof(string[i]) === "string")
-                    {
-                        countS ++;
-                    }
-
-                }
-                let result = `Number: ${countN} , String: ${countS}`;
-                return result;
+function getNumbers(allArray){
+            let newArrayOdd = [];
+            let newArrayEven = [];
+        if(Array.isArray(allArray))
+        {
+            for(let i = 0; i < allArray.length; i++)
+            {
+                      if(typeof((allArray[i])) === "number" || allArray[i] === 0 )
+                      {
+                            if(allArray[i]%2 === 0)
+                            {
+                               newArrayOdd.push(allArray[i]);
+                            }else
+                             {
+                               newArrayEven.push(allArray[i]);
+                             }
+                       }
+              }
+              for(let i = 0; i < newArrayOdd.length; i++ )
+              {
+                        newArrayEven.push(newArrayOdd[i]);
+              }
+              // let result = newArrayEven.concat(newArrayOdd);
+             //         return result;
+                        return newArrayEven;
+       }else{
+             return "input array";
+            }
 }
 
 //4
@@ -74,7 +106,7 @@ function sumOfNum(numbersArray)
             let result = 0;
             for(let i = 0; i < numbersArray.length; i++)
             {
-            debugger;
+//             debugger;
                     result += numbersArray[i];
              }
             return result;
@@ -87,7 +119,7 @@ function productsOfNum(numbersArray)
             let result = [];
             for(let i = 0; i < numbersArray.length; i++)
             {
-            debugger;
+//             debugger;
                     if(numbersArray[i+1] || numbersArray[i+1] === 0)
                     {
                     let product = numbersArray[i] * numbersArray[i+1];
