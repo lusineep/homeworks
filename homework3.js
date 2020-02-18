@@ -44,7 +44,7 @@ function numStringCount(string)
                     }
 
                 }
-                let result = Number: ${countN} , String: ${countS};
+                let result = `Number: ${countN} , String: ${countS}`;
                 return result;
 }
 
