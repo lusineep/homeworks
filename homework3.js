@@ -1,85 +1,98 @@
 //1
+
+
+
 //2
-function getNumbers(allArray){
+function getNumbers(allArray)
+{
             let newArrayOdd = [];
             let newArrayEven = [];
-            for(let i = 0; i < allArray.length; i++){
-                      if(typeof((allArray[i])) === "number" || allArray[i] === 0 ){
-                            if(allArray[i]%2 === 0){
+            for(let i = 0; i < allArray.length; i++)
+            {
+                      if(typeof((allArray[i])) === "number" || allArray[i] === 0 )
+                      {
+                            if(allArray[i]%2 === 0)
+                            {
                                newArrayOdd.push(allArray[i]);
-                        }else{
+                             }else{
                             newArrayEven.push(allArray[i]);
-                        }
-                  }
-        }
-               for(let i = 0; i < newArrayOdd.length; i++ ){
+                                  }
+                       }
+              }
+              for(let i = 0; i < newArrayOdd.length; i++ )
+              {
                         newArrayEven.push(newArrayOdd[i]);
-                }
+              }
               // let result = newArrayEven.concat(newArrayOdd);
              //         return result;
-                return newArrayEven;
+                        return newArrayEven;
 }
 
 //3
-function numStringCount(string){
+function numStringCount(string)
+{
                let countN = 0;
                let countS = 0;
-               for(let i = 0; i < string.length; i++){
-                    if(typeof(string[i]) === "number"){
+               for(let i = 0; i < string.length; i++)
+               {
+                    if(typeof(string[i]) === "number")
+                    {
                         countN ++;
-                    }else if(typeof(string[i]) === "string"){
+                    }else if(typeof(string[i]) === "string")
+                    {
                         countS ++;
                     }
 
-            }
-            let result = Number: ${countN} , String: ${countS};
-            return result;
-    }
+                }
+                let result = Number: ${countN} , String: ${countS};
+                return result;
+}
 
 //4
-function maxlength(words){
+function maxlength(words)
+{
                 let min = 9;
                 let max = 0;
-           for(let i = 0; i < words.length; i++){
-                
-                if(words[i].length < min){
-                    
-                    min = words[i].length;
-              
+                for(let i = 0; i < words.length; i++)
+                {
+                        if(words[i].length < min)
+                        {
+                           min = words[i].length;
+                        }
+                        if(words[i].length > max)
+                        {
+                           max = words[i].length;
+                        }
                 }
-                if(words[i].length > max){
-                    
-                    max = words[i].length;
-              
-                }
-               
-           
-        }
- let result  = max + min;  
-return result;      
-    }
+             let result  = max + min;  
+             return result;      
+}
 
 //5
-function sumOfNum(numbersArray){
+function sumOfNum(numbersArray)
+{
             let result = 0;
-            for(let i = 0; i < numbersArray.length; i++){
-debugger;
+            for(let i = 0; i < numbersArray.length; i++)
+            {
+            debugger;
                     result += numbersArray[i];
-                      }
-        return result;
+             }
+            return result;
 }
 
 //6
 
-function productsOfNum(numbersArray){
+function productsOfNum(numbersArray)
+{
             let result = [];
-            for(let i = 0; i < numbersArray.length; i++){
-debugger;
-                    if(numbersArray[i+1] || numbersArray[i+1] === 0){
+            for(let i = 0; i < numbersArray.length; i++)
+            {
+            debugger;
+                    if(numbersArray[i+1] || numbersArray[i+1] === 0)
+                    {
                     let product = numbersArray[i] * numbersArray[i+1];
                     result.push(product);
-                    
                     }
-                      }
+            }
         return result;
 }
