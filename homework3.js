@@ -30,7 +30,7 @@ function getNumbers(allArray)
             let newArrayEven = [];
             for(let i = 0; i < allArray.length; i++)
             {
-                      if(typeof((allArray[i])) === "number" || allArray[i] === 0 )
+                      if(typeof((allArray[i])) === "number" )
                       {
                             if(allArray[i]%2 === 0)
                             {
