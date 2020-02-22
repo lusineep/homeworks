@@ -50,36 +50,21 @@ function getNumbers(allArray)
 }
 
 //3
-function getNumbers(allArray){
-            let newArrayOdd = [];
-            let newArrayEven = [];
-        if(Array.isArray(allArray))
-        {
-            for(let i = 0; i < allArray.length; i++)
-            {
-                      if(typeof((allArray[i])) === "number" || allArray[i] === 0 )
-                      {
-                            if(allArray[i]%2 === 0)
-                            {
-                               newArrayOdd.push(allArray[i]);
-                            }else
-                             {
-                               newArrayEven.push(allArray[i]);
-                             }
-                       }
-              }
-              for(let i = 0; i < newArrayOdd.length; i++ )
-              {
-                        newArrayEven.push(newArrayOdd[i]);
-              }
-              // let result = newArrayEven.concat(newArrayOdd);
-             //         return result;
-                        return newArrayEven;
-       }else{
-             return "input array";
-            }
-}
 
+function numStringCount(string){
+               let countN = 0;
+               let countS = 0;
+               for(let i = 0; i < string.length; i++){
+                    if(typeof(string[i]) === "number"){
+                        countN ++;
+                    }else if(typeof(string[i]) === "string"){
+                        countS ++;
+                    }
+
+            }
+            let result = `Number: ${countN} , String: ${countS}`;
+            return result;
+    }
 //4
 function maxlength(words)
 {
