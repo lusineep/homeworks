@@ -4,8 +4,7 @@ function fibonacci (max){
           let num = 0;
           let first = 0;
           let second = 1;
-          
-        while((num + second) < max){
+          while((num + second) < max){
 // debugger;
             num = first + second;
             res += `${num} , `;
@@ -48,7 +47,6 @@ function findeNumberInArray(numberArray){
             for(let i = 0; i < numberArray.length; i++){
 // debugger;
                 if(numberArray[i] < min){
-                    
                     min = numberArray[i];
                 }
                 if(numberArray[i] > max){
@@ -60,7 +58,6 @@ function findeNumberInArray(numberArray){
                 return true;
         }else {return false;
         }
-    
 }
 
 //4-- I think this is not the best solution but couldn't find better way
@@ -89,10 +86,23 @@ debugger;
 
 //5
 
-
-
-
-
+function paddingArray(array,padAmount,repeat){
+         let stringOfArray = array.join("");
+         let startRep = "";
+         let endRep = "";
+         if(padAmount <= stringOfArray.length){
+             let start = stringOfArray.substring(0,padAmount);
+             let end = stringOfArray.substring(stringOfArray.length-padAmount,stringOfArray.length);
+                for(let i = 0; i < repeat; i++){
+// debugger;
+                    startRep +=start;
+                    endRep += end;
+                }
+         }
+            let result = startRep + stringOfArray + endRep;
+            let newArray = result.split("");
+            return newArray;
+}
 
 //6
 
