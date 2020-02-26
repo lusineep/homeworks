@@ -63,7 +63,31 @@ function findeNumberInArray(numberArray){
     
 }
 
-//4
+//4-- I think this is not the best solution but couldn't find better way
+
+function findeNumberInArray(numberArray){
+            let max = -Infinity;
+            let min = Infinity;
+            for(let i = 0; i < numberArray.length; i++){
+debugger;
+                    if(numberArray[i] > max){
+                    max = numberArray[i];
+            }
+        }
+    numberArray[numberArray.indexOf(max)] = 0;
+    max = -Infinity;
+  for(let i = 0; i < numberArray.length; i++){
+debugger;
+                 if(numberArray[i] > max){
+                    max = numberArray[i];
+            }
+        }
+            
+   return numberArray.indexOf(max)
+    
+    }
+
+//5
 
 
 
