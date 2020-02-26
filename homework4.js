@@ -42,6 +42,29 @@ function reminderOrQuotient(number){
 }
 
 //3
+function findeNumberInArray(numberArray){
+            let max = -Infinity;
+            let min = Infinity;
+            for(let i = 0; i < numberArray.length; i++){
+// debugger;
+                if(numberArray[i] < min){
+                    
+                    min = numberArray[i];
+                }
+                if(numberArray[i] > max){
+                    max = numberArray[i];
+            }
+        }
+    let result = max - min;
+        if(numberArray.indexOf(result) !== -1){
+                return true;
+        }else {return false;
+        }
+    
+}
+
+//4
+
 
 
 
